@@ -1,0 +1,27 @@
+# Ensure scripting addition is added to Dock
+sudo yabai --load-sa
+yabai -m signal add --event=dock_did_restart action="sudo yabai --load-sa"
+
+# Global configuration values
+yabai -m config debug_output                off
+yabai -m config external_bar                all:50:0
+yabai -m config mouse_follows_focus         off
+yabai -m config focus_follows_mouse         autofocus
+yabai -m config window_topmost              on
+yabai -m config window_shadow               off
+yabai -m config window_opacity              off
+yabai -m config window_opacity_duration     0.0
+yabai -m config window_border               off
+yabai -m config split_ratio                 0.5
+yabai -m config auto_balance                off
+yabai -m config mouse_modifier              cmd
+yabi -m config mouse_action1               move
+yabai -m config mouse_action2               resize
+yabai -m config mouse_drop_action           swap
+
+# Spaxe and layout settings
+yabai -m config layout                      bsp
+yabai -m config bottom_padding              20
+yabai -m config left_padding                20
+yabai -m config right_padding               20
+yabai -m config window_gap                  20
